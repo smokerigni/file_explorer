@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="hu">
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explore files...</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/ionicons.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../assets/css/explore.css"  media="screen,projection"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="row" id="skeleton-breadcrumbs">
+            <div class="col s12" id="breadcrumbs">
+            </div>
+        </div>
+        <div class="row" id="skeleton-explore-area">
+            <div class="col m4 s2">
+                <div id="drive-list">
+                    <span class="explore-title">Drives</span>
+                </div>
+            </div>
+            <div class="col m8 s10">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th data-field="name">Name</th>
+                            <th data-field="extension">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="file-list">
+
+                    </tbody>
+                </table>
+                <div id="progress" class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row valign-wrapper" id="skeleton-footer">
+            <div class="col m4 right-align valign">
+                <button class="waves-effect waves-light btn open disabled">Open</button>
+            </div>
+            <div class="col m8 valign">
+                <div class="open-file-path">Select file...</div>
+            </div>
+        </div>
+        <script src="../controllers/explore.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../assets/js/hammer.min.js"></script>
+        <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
     </body>
 </html>
