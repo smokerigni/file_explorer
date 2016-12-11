@@ -23,7 +23,7 @@ app.on('ready', function () {
             label: "File",
             submenu: [
                 {label: "Reset", accelerator: "Command+R", click: function () {
-                        mainWindow.loadURL('file://' + __dirname + '/public/index.html');
+                        mainWindow.loadURL('file://' + __dirname + '/views/index.html');
                     }},
                 {type: "separator"},
                 {label: "Quit", accelerator: "Command+Q", click: function () {
