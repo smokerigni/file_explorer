@@ -133,6 +133,13 @@ $(document).ready(function () {
     $('#file-list').on('click', '.disabled-file', function () {
         alert("This is a non-selectable file! Allowed extension are: " + allowed);
     });
+    //ipc send
+    
+    $('.open').on('click', function () {
+        var filepath = $(this).attr('data-file-path');
+        ipc.send('openfile', {data: filepath});
+        window.close();
+    });
 });
 
 

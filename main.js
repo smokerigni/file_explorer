@@ -18,3 +18,8 @@ app.on('ready', function () {
     });
 });
 
+var ipc = require('ipc');
+
+ipc.on('openfile', function (event, data) {
+    mainWindow.loadURL(data.data);
+});
