@@ -4,6 +4,8 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 var mainWindow = null;
 
+var Menu = require('menu');
+
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
         app.quit();
@@ -16,6 +18,20 @@ app.on('ready', function () {
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+    
+    var template = [{
+            label: "File",
+            submenu: [
+                {label: "Reset", accelerator: "Command+R", click: function () {
+                        mainWindow.loadURL('file://' + __dirname + '/public/index.html');
+                    }},
+                {type: "separator"},
+                {label: "Quit", accelerator: "Command+Q", click: function () {
+                        app.quit();
+                    }}
+            ]}
+    ];
+    Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 });
 
 var ipc = require('ipc');
