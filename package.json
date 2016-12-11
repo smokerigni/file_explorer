@@ -1,0 +1,29 @@
+{
+  "name": "file-browser",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "smokerigni@gmail.com",
+  "main": "main.js",
+  "dependencies": {
+    "commander": "~2.3",
+    "drivelist": "^5.0.4",
+    "express": "~4.4",
+    "jquery": "^3.1.1",
+    "lodash": "~2.4"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.35.2",
+    "mocha": "1.20.1"
+  },
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "description": "File browser window",
+  "license": "MIT"
+}
